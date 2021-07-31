@@ -1,5 +1,4 @@
-"# CC53B 1/2021"
+# Repositório da disciplina CC53B 1/2021
 
-Linguagem de Estruturação e Apresentação de Conteúdos
-
-Prof. Ricardo Sobjak
+ * Disciplina: Linguagem de Estruturação e Apresentação de Conteúdos
+ * Prof. Ricardo Sobjak
