@@ -1,6 +1,6 @@
 <h2>Cadastrar-se</h2>
 
-<form action="user/user.controller.php" method="POST">
+<form action="user/controller.php" method="POST">
 	<input type="hidden" name="action" value="<?php echo $_GET["action"]; ?>" />
 
 	<label for="nome">Nome</label>
@@ -39,7 +39,5 @@
 	<label for="senha2">Confirmar senha</label>
 	<input type="password" name="senha2" />
 
-
 	<button type="submit" class="btn secundario">Cadastrar</button>
-
 </form>

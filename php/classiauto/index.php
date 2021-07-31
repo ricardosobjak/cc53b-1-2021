@@ -19,7 +19,7 @@ session_start();
 
 		<nav>
 			<ul>
-				<li><a href="?pg=user/Form.php&action=insert">Cadastrar-se</a></li>
+				<li><a href="?pg=user/form.php&action=insert">Cadastrar-se</a></li>
 
 				<?php
 				if (isset($_SESSION["classiauto_user_nome"]) and isset($_SESSION["classiauto_user_email"])) :
