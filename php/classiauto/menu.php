@@ -1,28 +1,32 @@
+<br />
+<?php
+if (isset($_SESSION["classiauto_user_nome"]) and isset($_SESSION["classiauto_user_email"])) :
+?>
+	<div class="titulo">Meus links</div>
+	<ul >
+		<li><a href="?pg=user/meus_anuncios.php">Anúncios</a></li>
+		<li><a href="?pg=anuncio/form.php&action=insert">Quero anunciar</a></li>
+	</ul>
 
-<div class="titulo">
-  Meus Links
-</div>
+	<br />
+<?php
+endif;
+?>
+
+
 <ul>
-  <li><a href="#">Anúncios</a></li>
-  <li><a href="#">Quero anunciar</a></li>
-</ul>
+<div class="titulo">Categorias</div>
+	<?php
+	include "conexao.php";
 
+	$sql = "SELECT * FROM tb_categoria ORDER BY nome";
 
-<div class="titulo">
-  Categorias
-</div>
-<ul>
-  <?php
-    include 'conexao.php';
+	$result = mysqli_query($_conn, $sql);
 
-    $sql = "SELECT * from tb_categoria ORDER BY nome";
-
-    $result = mysqli_query($_conn, $sql);
-
-    while($cat = mysqli_fetch_array($result)) :
-  ?>
-  <li><a href="#"><?= $cat["nome"] ?></a></li>
-  <?php 
-    endwhile;
-  ?>
+	while ($usuario = mysqli_fetch_array($result)) :
+	?>
+		<li><a href="?pg=anuncio/lista.php&categoria=<?php echo $usuario["id"]; ?>"><?php echo $usuario["nome"]; ?></a></li>
+	<?php
+	endwhile;
+	?>
 </ul>
